@@ -1,15 +1,28 @@
 import { Product, AccessoryItem, ColorSwatch } from '../types';
 
-export const HERO_IMAGE = '/src/assets/images/raahi_hero_editorial_1794375915535.jpg';
-export const CORSET_SAREE_IMAGE = '/src/assets/images/raahi_corset_saree_1794375915656.jpg';
-export const TRENCH_KURTA_IMAGE = '/src/assets/images/raahi_trench_kurta_1794375918587.jpg';
-export const ORGANZA_SAREE_IMAGE = '/src/assets/images/raahi_organza_saree_1794375918361.jpg';
-export const ATELIER_IMAGE = '/src/assets/images/raahi_atelier_craft_1794375919801.jpg';
-export const ACCESSORIES_IMAGE = '/src/assets/images/savitri_accessories_set_1794377798021.jpg';
-export const GENZ_EDITORIAL_IMAGE = '/src/assets/images/savitri_genz_editorial_1794377797723.jpg';
-export const DHOTI_JUMPSUIT_IMAGE = '/src/assets/images/savitri_dhoti_jumpsuit_1794378215037.jpg';
-export const HAATHPHOOL_IMAGE = '/src/assets/images/savitri_haathphool_cuff_1794378219597.jpg';
-export const EMERALD_POTLI_IMAGE = '/src/assets/images/savitri_emerald_potli_1794378215448.jpg';
+import HERO_IMAGE from '../assets/images/raahi_hero_editorial_1794375915535.jpg';
+import CORSET_SAREE_IMAGE from '../assets/images/raahi_corset_saree_1794375915656.jpg';
+import TRENCH_KURTA_IMAGE from '../assets/images/raahi_trench_kurta_1794375918587.jpg';
+import ORGANZA_SAREE_IMAGE from '../assets/images/raahi_organza_saree_1794375918361.jpg';
+import ATELIER_IMAGE from '../assets/images/raahi_atelier_craft_1794375919801.jpg';
+import ACCESSORIES_IMAGE from '../assets/images/savitri_accessories_set_1794377798021.jpg';
+import GENZ_EDITORIAL_IMAGE from '../assets/images/savitri_genz_editorial_1794377797723.jpg';
+import DHOTI_JUMPSUIT_IMAGE from '../assets/images/savitri_dhoti_jumpsuit_1794378215037.jpg';
+import HAATHPHOOL_IMAGE from '../assets/images/savitri_haathphool_cuff_1794378219597.jpg';
+import EMERALD_POTLI_IMAGE from '../assets/images/savitri_emerald_potli_1794378215448.jpg';
+
+export {
+  HERO_IMAGE,
+  CORSET_SAREE_IMAGE,
+  TRENCH_KURTA_IMAGE,
+  ORGANZA_SAREE_IMAGE,
+  ATELIER_IMAGE,
+  ACCESSORIES_IMAGE,
+  GENZ_EDITORIAL_IMAGE,
+  DHOTI_JUMPSUIT_IMAGE,
+  HAATHPHOOL_IMAGE,
+  EMERALD_POTLI_IMAGE,
+};
 
 export const PRODUCTS: Product[] = [
   {
