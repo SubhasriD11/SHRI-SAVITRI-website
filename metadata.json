@@ -1,0 +1,6 @@
+{
+  "name": "RAAHI Studio",
+  "description": "High-end Indo-Western couture balancing editorial minimalism with heritage artisan craft.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

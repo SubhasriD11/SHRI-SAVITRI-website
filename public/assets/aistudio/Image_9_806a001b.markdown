@@ -1,0 +1,215 @@
+---
+name: RAAHI Studio
+colors:
+  surface: '#fbf9f6'
+  surface-dim: '#dbdad7'
+  surface-bright: '#fbf9f6'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f5f3f0'
+  surface-container: '#efeeeb'
+  surface-container-high: '#eae8e5'
+  surface-container-highest: '#e4e2df'
+  on-surface: '#1b1c1a'
+  on-surface-variant: '#4e4543'
+  inverse-surface: '#30312f'
+  inverse-on-surface: '#f2f0ed'
+  outline: '#7f7572'
+  outline-variant: '#d1c4c1'
+  surface-tint: '#635d5b'
+  primary: '#000000'
+  on-primary: '#ffffff'
+  primary-container: '#1f1b1a'
+  on-primary-container: '#898281'
+  inverse-primary: '#cdc5c3'
+  secondary: '#775a19'
+  on-secondary: '#ffffff'
+  secondary-container: '#fed488'
+  on-secondary-container: '#785a1a'
+  tertiary: '#000000'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#390c00'
+  on-tertiary-container: '#d3623a'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#eae0de'
+  primary-fixed-dim: '#cdc5c3'
+  on-primary-fixed: '#1f1b1a'
+  on-primary-fixed-variant: '#4b4644'
+  secondary-fixed: '#ffdea5'
+  secondary-fixed-dim: '#e9c176'
+  on-secondary-fixed: '#261900'
+  on-secondary-fixed-variant: '#5d4201'
+  tertiary-fixed: '#ffdbcf'
+  tertiary-fixed-dim: '#ffb59c'
+  on-tertiary-fixed: '#390c00'
+  on-tertiary-fixed-variant: '#822801'
+  background: '#fbf9f6'
+  on-background: '#1b1c1a'
+  surface-variant: '#e4e2df'
+typography:
+  display-lg:
+    fontFamily: Playfair Display
+    fontSize: 56px
+    fontWeight: '400'
+    lineHeight: 64px
+    letterSpacing: -0.02em
+  display-lg-mobile:
+    fontFamily: Playfair Display
+    fontSize: 38px
+    fontWeight: '400'
+    lineHeight: 46px
+    letterSpacing: -0.01em
+  headline-lg:
+    fontFamily: Playfair Display
+    fontSize: 40px
+    fontWeight: '400'
+    lineHeight: 48px
+    letterSpacing: -0.01em
+  headline-lg-mobile:
+    fontFamily: Playfair Display
+    fontSize: 28px
+    fontWeight: '400'
+    lineHeight: 36px
+  headline-md:
+    fontFamily: Playfair Display
+    fontSize: 28px
+    fontWeight: '500'
+    lineHeight: 36px
+  headline-sm:
+    fontFamily: Playfair Display
+    fontSize: 22px
+    fontWeight: '500'
+    lineHeight: 30px
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '400'
+    lineHeight: 28px
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 15px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 20px
+  label-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.08em
+  label-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 10px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.12em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 3rem
+  margin-mobile: 1.25rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.75rem
+  space-xl: 3rem
+---
+
+## Brand & Style
+
+This design system expresses high-end Indo-Western couture tailored for modern Gen-Z cultural sensibilities. The visual language balances editorial minimalism with heritage artisan craft: uncluttered expanses of warm ivory and sandstone, precise micro-details, architectural silhouettes, and editorial typography that evokes the gravitas of print fashion journalism. 
+
+The aesthetic style is **Editorial High-Fashion Minimalism with Tactile Resonance**:
+- Spacious, deliberate negative space mirroring contemporary gallery curation.
+- Muted organic tones framing garments rather than competing with them.
+- Subdued hairline borders and micro-accents of burnished antique gold that honor South Asian metallic weaving (Zari) without visual gaudiness.
+- High-contrast visual scale where expansive imagery and striking editorial headers command the viewport.
+
+## Colors
+
+The color palette is grounded in natural textiles, stone courtyards, and mineral pigments:
+
+- **Primary (`#1A1615`) - Deep Espresso Charcoal:** Replaces stark black for a richer, softer editorial contrast across typographic headlines, high-priority buttons, and dominant silhouettes.
+- **Secondary (`#C5A059`) - Burnished Antique Gold:** A muted, non-reflective metallic tone used for heritage tags, craftsmanship markers, active micro-states, and subtle decorative borders.
+- **Tertiary (`#C85A32`) - Terracotta Vermillion:** A spirited mineral earth accent referencing sindoor and baked clay, reserved for seasonal drops, limited-edition pills, and alert states.
+- **Neutral (`#FAF8F5`) - Warm Ivory:** The overarching light canvas, supplemented by sandstone `#F5F0EA` for container surfaces and `#EAE4DC` for hairline boundaries.
+- **Accent Slate (`#687259`) - Muted Olive Sage:** An organic foil for drape styles, textile origin disclosures, and secondary chips.
+
+Strict contrast guidelines must be maintained: pure black (`#000000`) and optical pure white (`#FFFFFF`) are prohibited to protect the organic, tactile atmosphere of the surfaces.
+
+## Typography
+
+Typography establishes an intentional dialogue between traditional regal posture and contemporary international layout.
+
+- **Headlines & Titles:** Set in `Playfair Display` with natural proportional tracking and generous vertical line height, bringing the authority of high-fashion magazines to Indo-Western collections.
+- **Body & Micro-Copy:** Set in `Plus Jakarta Sans` for clean, unadorned legibility across fabric compositions, garment dimensions, and checkout workflows.
+- **Labels, Badges, & Metadata:** Formatted in uppercase `Plus Jakarta Sans` with expanded letter-spacing (`0.08em` to `0.12em`) to mirror luxury house cataloging systems.
+
+## Layout & Spacing
+
+The layout philosophy uses a structured 12-column fluid grid on desktop, scaling to a 6-column system on tablet and a 2-column or 4-column framework on mobile devices.
+
+- **Editorial Rhythm:** Large margins (`3rem`) create framing around lookbooks and product carousels, allowing photography to occupy center-stage without edge tension.
+- **Mobile Adaptations:** The horizontal margin drops to `1.25rem` (`margin-mobile`), maintaining breathing room while prioritizing full-bleed lookbook visuals.
+- **Asymmetrical Offsets:** Editorial feature layouts may employ intentional 1-column offsets to break standard e-commerce uniformity and present drape details with editorial pacing.
+
+## Elevation & Depth
+
+This design system avoids heavy drop shadows, relying instead on structural surface layering and low-contrast borders:
+
+- **Surface Layering:** The base background is Warm Ivory (`#FAF8F5`). Cards, elevated drawers, and contextual panels shift to Sandstone (`#F5F0EA`) to communicate lift without physical weight.
+- **Hairline Outlines:** Overlays, cards, and modal dividers employ a razor-thin 1px border in `#EAE4DC` (optical tone: muted sandstone beige).
+- **Floating Controls:** Floating navigation bars and interactive quick-action trays utilize semi-translucent backdrops (`rgba(250, 248, 245, 0.82)`) with a `16px` backdrop blur (`backdrop-filter: blur(16px)`), outlined by a `1px` stroke of `#EAE4DC`.
+- **Soft Ambient Focus:** When popovers or quick-buy drawers engage, depth is marked by an ultra-diffused shadow: `0 16px 36px -12px rgba(26, 22, 21, 0.06)`.
+
+## Shapes
+
+The design system maintains a refined, architectural geometry with targeted softness:
+
+- **Architectural Framing:** Image containers, product tiles, and structural panels utilize crisp `0.25rem` (`roundedness: 1`) or razor-sharp corners to evoke print editorials and lookbook frames.
+- **Interactive Pill Contrast:** While cards and images maintain disciplined geometry, interactive controls (category filters, craft pills, size selectors) adopt full-rounded pill shapes (`9999px`) to create a tactile, touch-friendly touchpoint for younger mobile users.
+- **Hairline Consistency:** All borders and divider treatments remain strictly fixed at 1px thickness.
+
+## Components
+
+### Buttons
+- **Primary Action:** Solid Deep Charcoal (`#1A1615`) fill with Warm Ivory (`#FAF8F5`) text. Rectangular with soft `0.25rem` corners, uppercase `label-md` typography, and generous vertical padding (`0.875rem` vertical, `2rem` horizontal).
+- **Secondary Action:** Transparent background with a `1px` border of `#1A1615` and Deep Charcoal text. On hover, transitions smoothly to Sandstone (`#F5F0EA`).
+- **Tertiary / Gold Micro-Action:** Text-only button styled in Burnished Antique Gold (`#C5A059`) with an understated underline offset by `4px`.
+
+### Chips & Filter Pills
+- Sleek full-pill geometry (`border-radius: 9999px`).
+- Inactive state: Sandstone background (`#F5F0EA`), hairline border (`#EAE4DC`), and Deep Charcoal body text.
+- Active state: Deep Charcoal (`#1A1615`) fill with Ivory text, accompanied by an optional micro-dot indicator in Antique Gold (`#C5A059`).
+
+### Craftsmanship & Drape Style Tags
+- Special luxury metadata tags indicating techniques like *Aari Embroidery*, *Chanderi Silk*, or *Pre-Draped Sari*.
+- Styled with an ivory background, a `1px` border of Burnished Antique Gold (`#C5A059`), and `label-sm` gold typography.
+
+### Product Cards
+- Borderless frame with a 4:5 or 3:4 high-fashion aspect ratio.
+- Surrounded by an optional hairline border (`#EAE4DC`) on hover.
+- Information layout: Left-aligned title in `headline-sm`, subtitle/fabric in `body-sm` neutral, and right-aligned price in `body-md` Charcoal. No aggressive sale badges; limited runs are tagged with a minimal Terracotta (`#C85A32`) pill badge positioned on the top left.
+
+### Floating Navigation Bar
+- Floats detached from the top viewport edge with `1.5rem` desktop margin and `1rem` mobile margin.
+- Sandstone/Ivory frosted glass treatment (`rgba(250, 248, 245, 0.88)` with `blur(16px)`).
+- Centered brand logotype with delicate 18px stroke icons for search, wishlist, and bag.
+
+### Form Inputs & Selectors
+- Flat sandstone-tinted input fields (`#F5F0EA`) with a bottom-only or subtle hairline border (`#EAE4DC`).
+- Active focus state transitions the border to Deep Charcoal (`#1A1615`) without glowing halos.
+- Floating label transitioning smoothly from `body-md` to uppercase `label-sm`.
