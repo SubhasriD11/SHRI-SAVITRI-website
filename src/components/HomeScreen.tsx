@@ -33,19 +33,19 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ onNavigate }) => {
               <span>The Varanasi Atelier</span>
             </div>
 
-            <h1 className="font-['Playfair_Display'] text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.08] font-normal tracking-tight text-[#FAF8F5] mb-6 text-balance">
+            <h1 className="font-['Playfair_Display'] text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.08] font-normal tracking-tight text-[#FAF8F5] mb-5 md:mb-6 text-balance">
               Architectural Drapes Meet Heritage Weaves.
             </h1>
 
-            <p className="font-['Plus_Jakarta_Sans'] text-base md:text-lg text-[#FAF8F5]/85 font-light leading-relaxed mb-8 max-w-xl">
+            <p className="font-['Plus_Jakarta_Sans'] text-sm sm:text-base md:text-lg text-[#FAF8F5]/85 font-light leading-relaxed mb-6 md:mb-8 max-w-xl">
               Where 5,000 years of unstitched silk heritage intersects Parisian corsetry 
               and sharp Savile Row tailoring. Designed for effortless 2-minute wear.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
               <button
                 onClick={() => onNavigate('catalogue')}
-                className="px-8 py-3.5 bg-[#FAF8F5] text-[#1A1615] hover:bg-[#C5A059] hover:text-[#1A1615] transition-all duration-300 text-xs md:text-sm font-semibold tracking-[0.14em] uppercase rounded shadow-lg flex items-center gap-3 cursor-pointer group"
+                className="w-full sm:w-auto px-8 py-3.5 bg-[#FAF8F5] text-[#1A1615] hover:bg-[#C5A059] hover:text-[#1A1615] transition-all duration-300 text-xs md:text-sm font-semibold tracking-[0.14em] uppercase rounded shadow-lg flex items-center justify-center gap-3 cursor-pointer group"
               >
                 <span>Explore Drop</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -53,7 +53,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ onNavigate }) => {
 
               <button
                 onClick={() => onNavigate('brand-story')}
-                className="px-7 py-3.5 border border-[#FAF8F5]/40 text-[#FAF8F5] hover:bg-[#FAF8F5]/10 transition-all duration-300 text-xs md:text-sm font-medium tracking-[0.12em] uppercase rounded"
+                className="w-full sm:w-auto px-7 py-3.5 border border-[#FAF8F5]/40 text-[#FAF8F5] hover:bg-[#FAF8F5]/10 transition-all duration-300 text-xs md:text-sm font-medium tracking-[0.12em] uppercase rounded flex items-center justify-center"
               >
                 Atelier Process
               </button>
@@ -107,15 +107,15 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ onNavigate }) => {
             </div>
             <button
               onClick={() => onNavigate('catalogue')}
-              className="px-6 py-2.5 bg-[#1A1615] text-[#FAF8F5] hover:bg-[#C5A059] hover:text-[#1A1615] text-xs font-semibold uppercase tracking-wider rounded transition-all shadow cursor-pointer inline-flex items-center gap-2"
+              className="w-full sm:w-auto px-6 py-2.5 bg-[#1A1615] text-[#FAF8F5] hover:bg-[#C5A059] hover:text-[#1A1615] text-xs font-semibold uppercase tracking-wider rounded transition-all shadow cursor-pointer inline-flex items-center justify-center gap-2"
             >
               <span>Open Customizer Studio</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
 
-          <div className="flex items-center gap-3 shrink-0">
-            <div className="relative w-32 md:w-40 aspect-[3/4] rounded-lg overflow-hidden border border-[#EAE4DC] shadow-md">
+          <div className="flex items-center justify-center sm:justify-start gap-3 w-full sm:w-auto shrink-0">
+            <div className="relative w-1/2 sm:w-36 md:w-40 aspect-[3/4] rounded-lg overflow-hidden border border-[#EAE4DC] shadow-md">
               <img
                 src={GENZ_EDITORIAL_IMAGE}
                 alt="Custom Outfit Preview"
@@ -127,7 +127,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({ onNavigate }) => {
               </span>
             </div>
 
-            <div className="relative w-32 md:w-40 aspect-[3/4] rounded-lg overflow-hidden border border-[#EAE4DC] shadow-md">
+            <div className="relative w-1/2 sm:w-36 md:w-40 aspect-[3/4] rounded-lg overflow-hidden border border-[#EAE4DC] shadow-md">
               <img
                 src={ACCESSORIES_IMAGE}
                 alt="Paired Accessories"

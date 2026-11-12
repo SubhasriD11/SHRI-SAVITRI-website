@@ -55,8 +55,8 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
         className="absolute inset-0 bg-[#1A1615]/50 backdrop-blur-sm transition-opacity"
       />
 
-      <div className="fixed inset-y-0 right-0 max-w-full flex pl-6 sm:pl-10">
-        <div className="w-screen max-w-md bg-[#FAF8F5] border-l border-[#EAE4DC] shadow-2xl flex flex-col justify-between">
+      <div className="fixed inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10">
+        <div className="w-full sm:max-w-md bg-[#FAF8F5] border-l border-[#EAE4DC] shadow-2xl flex flex-col justify-between h-full">
           {/* Header */}
           <div className="px-6 py-5 border-b border-[#EAE4DC] flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -247,14 +247,14 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => onUpdateQuantity(idx, item.quantity - 1)}
-                            className="w-5 h-5 rounded border border-[#EAE4DC] bg-[#FAF8F5] flex items-center justify-center text-xs font-bold text-[#1A1615] hover:bg-white"
+                            className="w-7 h-7 rounded border border-[#EAE4DC] bg-[#FAF8F5] flex items-center justify-center text-xs font-bold text-[#1A1615] hover:bg-white active:scale-95 transition-transform"
                           >
                             -
                           </button>
-                          <span className="text-xs font-semibold tabular-nums">{item.quantity}</span>
+                          <span className="text-xs font-semibold tabular-nums w-4 text-center">{item.quantity}</span>
                           <button
                             onClick={() => onUpdateQuantity(idx, item.quantity + 1)}
-                            className="w-5 h-5 rounded border border-[#EAE4DC] bg-[#FAF8F5] flex items-center justify-center text-xs font-bold text-[#1A1615] hover:bg-white"
+                            className="w-7 h-7 rounded border border-[#EAE4DC] bg-[#FAF8F5] flex items-center justify-center text-xs font-bold text-[#1A1615] hover:bg-white active:scale-95 transition-transform"
                           >
                             +
                           </button>

@@ -235,7 +235,7 @@ export const ExploreScreen: React.FC<ExploreScreenProps> = ({
   };
 
   return (
-    <div className="w-full px-3 md:px-8 max-w-7xl mx-auto py-6 md:py-10">
+    <div className="w-full px-3 md:px-8 max-w-7xl mx-auto py-6 md:py-10 pb-28 lg:pb-10">
       {/* Studio Header & 3-Way Mode Switcher */}
       <div className="mb-8 text-center max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 mb-2 text-[#C5A059] text-[11px] uppercase font-semibold tracking-[0.25em]">
@@ -250,85 +250,88 @@ export const ExploreScreen: React.FC<ExploreScreenProps> = ({
           configure wearing preferences, and explore handcrafted temple jewelry & micro-potli bags.
         </p>
 
-        {/* 3-Way Mode Switcher Tabs */}
-        <div className="inline-flex flex-wrap p-1.5 rounded-full bg-[#F5F0EA] border border-[#EAE4DC] shadow-inner gap-1">
+        {/* 3-Way Mode Switcher Tabs (Responsive on Mobile) */}
+        <div className="inline-flex max-w-full overflow-x-auto p-1.5 rounded-full bg-[#F5F0EA] border border-[#EAE4DC] shadow-inner gap-1 scrollbar-none">
           <button
             onClick={() => setActiveTab('customizer')}
-            className={`px-4 sm:px-5 py-2 text-xs font-semibold tracking-wider uppercase rounded-full transition-all cursor-pointer ${
+            className={`px-3.5 sm:px-5 py-2 text-xs font-semibold tracking-wider uppercase rounded-full transition-all cursor-pointer whitespace-nowrap shrink-0 ${
               activeTab === 'customizer'
                 ? 'bg-[#1A1615] text-[#FAF8F5] shadow-sm'
                 : 'text-[#1A1615]/70 hover:text-[#1A1615]'
             }`}
           >
-            🎨 Interactive Customizer
+            <span className="sm:hidden">🎨 Customizer</span>
+            <span className="hidden sm:inline">🎨 Interactive Customizer</span>
           </button>
           <button
             onClick={() => setActiveTab('catalogue')}
-            className={`px-4 sm:px-5 py-2 text-xs font-semibold tracking-wider uppercase rounded-full transition-all cursor-pointer ${
+            className={`px-3.5 sm:px-5 py-2 text-xs font-semibold tracking-wider uppercase rounded-full transition-all cursor-pointer whitespace-nowrap shrink-0 ${
               activeTab === 'catalogue'
                 ? 'bg-[#1A1615] text-[#FAF8F5] shadow-sm'
                 : 'text-[#1A1615]/70 hover:text-[#1A1615]'
             }`}
           >
-            👗 Silhouettes Archive ({PRODUCTS.length})
+            <span className="sm:hidden">👗 Silhouettes ({PRODUCTS.length})</span>
+            <span className="hidden sm:inline">👗 Silhouettes Archive ({PRODUCTS.length})</span>
           </button>
           <button
             onClick={() => setActiveTab('accessories')}
-            className={`px-4 sm:px-5 py-2 text-xs font-semibold tracking-wider uppercase rounded-full transition-all cursor-pointer ${
+            className={`px-3.5 sm:px-5 py-2 text-xs font-semibold tracking-wider uppercase rounded-full transition-all cursor-pointer whitespace-nowrap shrink-0 ${
               activeTab === 'accessories'
                 ? 'bg-[#1A1615] text-[#FAF8F5] shadow-sm'
                 : 'text-[#1A1615]/70 hover:text-[#1A1615]'
             }`}
           >
-            💍 Accessories & Jewelry ({ACCESSORIES_COLLECTION.length})
+            <span className="sm:hidden">💍 Jewelry ({ACCESSORIES_COLLECTION.length})</span>
+            <span className="hidden sm:inline">💍 Accessories & Jewelry ({ACCESSORIES_COLLECTION.length})</span>
           </button>
         </div>
       </div>
 
-      {/* QUICK PRESET MOOD SELECTOR (Gen-Z Favorites) */}
+      {/* QUICK PRESET MOOD SELECTOR (Gen-Z Favorites - Swipeable on Mobile) */}
       {activeTab === 'customizer' && (
-        <div className="mb-8 p-4 rounded-xl bg-[#F5F0EA] border border-[#EAE4DC] flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
+        <div className="mb-6 md:mb-8 p-3 sm:p-4 rounded-xl bg-[#F5F0EA] border border-[#EAE4DC] flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+          <div className="flex items-center gap-2 shrink-0">
             <Wand2 className="w-4 h-4 text-[#C5A059]" />
             <span className="text-xs font-semibold uppercase tracking-wider text-[#1A1615]">
               Instant Gen-Z Presets:
             </span>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-nowrap sm:flex-wrap overflow-x-auto pb-1.5 sm:pb-0 gap-2 scrollbar-none w-full sm:w-auto">
             <button
               onClick={() => applyPreset('sunset-rave')}
-              className="px-3 py-1.5 text-xs font-medium rounded-full bg-[#FAF8F5] border border-[#EAE4DC] text-[#1A1615] hover:border-[#C5A059] transition-all"
+              className="px-3 py-1.5 text-xs font-medium rounded-full bg-[#FAF8F5] border border-[#EAE4DC] text-[#1A1615] hover:border-[#C5A059] transition-all whitespace-nowrap shrink-0 cursor-pointer"
             >
-              🌅 Sunset Sangeet (Terracotta + Charcoal)
+              🌅 Sunset Sangeet
             </button>
             <button
               onClick={() => applyPreset('dhoti-power')}
-              className="px-3 py-1.5 text-xs font-medium rounded-full bg-[#FAF8F5] border border-[#EAE4DC] text-[#1A1615] hover:border-[#C5A059] transition-all"
+              className="px-3 py-1.5 text-xs font-medium rounded-full bg-[#FAF8F5] border border-[#EAE4DC] text-[#1A1615] hover:border-[#C5A059] transition-all whitespace-nowrap shrink-0 cursor-pointer"
             >
-              ⚡ Cyber Dhoti Jumpsuit
+              ⚡ Cyber Dhoti
             </button>
             <button
               onClick={() => applyPreset('minimalist-noir')}
-              className="px-3 py-1.5 text-xs font-medium rounded-full bg-[#FAF8F5] border border-[#EAE4DC] text-[#1A1615] hover:border-[#C5A059] transition-all"
+              className="px-3 py-1.5 text-xs font-medium rounded-full bg-[#FAF8F5] border border-[#EAE4DC] text-[#1A1615] hover:border-[#C5A059] transition-all whitespace-nowrap shrink-0 cursor-pointer"
             >
-              🖤 Brutalist Noir Trench
+              🖤 Noir Trench
             </button>
             <button
               onClick={() => applyPreset('royal-heirloom')}
-              className="px-3 py-1.5 text-xs font-medium rounded-full bg-[#FAF8F5] border border-[#EAE4DC] text-[#1A1615] hover:border-[#C5A059] transition-all"
+              className="px-3 py-1.5 text-xs font-medium rounded-full bg-[#FAF8F5] border border-[#EAE4DC] text-[#1A1615] hover:border-[#C5A059] transition-all whitespace-nowrap shrink-0 cursor-pointer"
             >
-              ✨ Molten Copper Organza
+              ✨ Molten Organza
             </button>
             <button
               onClick={handleRandomizeOutfit}
-              className="px-3.5 py-1.5 text-xs font-bold rounded-full bg-[#1A1615] text-[#FAF8F5] hover:bg-[#C5A059] hover:text-[#1A1615] transition-all flex items-center gap-1 shadow-sm"
+              className="px-3.5 py-1.5 text-xs font-bold rounded-full bg-[#1A1615] text-[#FAF8F5] hover:bg-[#C5A059] hover:text-[#1A1615] transition-all flex items-center gap-1 shadow-sm whitespace-nowrap shrink-0 cursor-pointer"
               title="Shuffle all customization options randomly"
             >
               <span>🎲 Shuffle Prototype</span>
             </button>
             <button
               onClick={handleResetOutfit}
-              className="px-2.5 py-1.5 text-xs font-semibold rounded-full bg-[#FAF8F5] border border-[#EAE4DC] text-[#1A1615]/70 hover:text-[#1A1615] transition-all"
+              className="px-2.5 py-1.5 text-xs font-semibold rounded-full bg-[#FAF8F5] border border-[#EAE4DC] text-[#1A1615]/70 hover:text-[#1A1615] transition-all whitespace-nowrap shrink-0 cursor-pointer"
               title="Reset to default prototype"
             >
               ↺ Reset
@@ -342,38 +345,38 @@ export const ExploreScreen: React.FC<ExploreScreenProps> = ({
          ========================================================================= */}
       {activeTab === 'customizer' && (
         <>
-          {/* STEP-BY-STEP PROGRESS BANNER */}
-          <div className="mb-6 p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE4DC] shadow-sm flex flex-wrap items-center justify-between gap-3">
-            <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#C5A059]" />
-              <span className="text-xs font-bold uppercase tracking-wider text-[#1A1615]">
-                Customization Steps:
+          {/* STEP-BY-STEP PROGRESS BANNER (Horizontal swipe on mobile) */}
+          <div className="mb-6 p-3 sm:p-3.5 rounded-xl bg-[#FAF8F5] border border-[#EAE4DC] shadow-sm flex items-center justify-between gap-3 overflow-x-auto scrollbar-none">
+            <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C5A059]" />
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#1A1615]">
+                Steps:
               </span>
             </div>
-            <div className="flex flex-wrap items-center gap-2 text-xs font-medium">
-              <span className="px-3 py-1 rounded-full bg-[#1A1615] text-[#FAF8F5] font-semibold">
-                1. Select Outfit
+            <div className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-medium shrink-0">
+              <span className="px-2.5 sm:px-3 py-1 rounded-full bg-[#1A1615] text-[#FAF8F5] font-semibold whitespace-nowrap">
+                1. Outfit
               </span>
               <span className="text-[#1A1615]/40 font-bold">→</span>
-              <span className="px-3 py-1 rounded-full bg-[#1A1615] text-[#FAF8F5] font-semibold">
-                2. Choose Colours
+              <span className="px-2.5 sm:px-3 py-1 rounded-full bg-[#1A1615] text-[#FAF8F5] font-semibold whitespace-nowrap">
+                2. Colours
               </span>
               <span className="text-[#1A1615]/40 font-bold">→</span>
-              <span className="px-3 py-1 rounded-full bg-[#1A1615] text-[#FAF8F5] font-semibold">
-                3. Choose Accessories
+              <span className="px-2.5 sm:px-3 py-1 rounded-full bg-[#1A1615] text-[#FAF8F5] font-semibold whitespace-nowrap">
+                3. Accessories
               </span>
               <span className="text-[#1A1615]/40 font-bold">→</span>
-              <span className="px-3 py-1 rounded-full bg-[#C5A059] text-[#1A1615] font-bold">
-                4. Live Pricing & Bag
+              <span className="px-2.5 sm:px-3 py-1 rounded-full bg-[#C5A059] text-[#1A1615] font-bold whitespace-nowrap">
+                4. Price & Bag
               </span>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-16">
-            {/* LEFT 7 COLS: STEP-BY-STEP CUSTOMIZATION CONTROLS */}
-            <div className="lg:col-span-7 space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 mb-16 pb-20 lg:pb-0">
+            {/* CONTROLS (Order-2 on mobile so preview appears at the top on phones, Order-1 on desktop) */}
+            <div className="order-2 lg:order-1 lg:col-span-7 space-y-6 md:space-y-8">
               {/* STEP 1: CHOOSE BASE SILHOUETTE */}
-              <div className="p-6 rounded-xl bg-[#FAF8F5] border border-[#EAE4DC] shadow-sm">
+              <div className="p-4 sm:p-6 rounded-xl bg-[#FAF8F5] border border-[#EAE4DC] shadow-sm">
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <span className="w-6 h-6 rounded-full bg-[#1A1615] text-[#FAF8F5] text-xs font-bold flex items-center justify-center">
@@ -783,10 +786,10 @@ export const ExploreScreen: React.FC<ExploreScreenProps> = ({
             </div>
           </div>
 
-          {/* RIGHT 5 COLS: STICKY LIVE LOOK PREVIEW & SMART RECOMMENDATION ENGINE */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
-            <div className="sticky top-24 space-y-6">
-              <div className="rounded-2xl overflow-hidden bg-[#FAF8F5] border border-[#EAE4DC] shadow-xl p-5">
+          {/* PREVIEW CANVAS (Order-1 on mobile so it displays at the top on phones, Order-2 on desktop) */}
+          <div className="order-1 lg:order-2 lg:col-span-5 flex flex-col gap-4 sm:gap-6">
+            <div className="lg:sticky lg:top-24 space-y-4 sm:space-y-6">
+              <div className="rounded-2xl overflow-hidden bg-[#FAF8F5] border border-[#EAE4DC] shadow-xl p-3 sm:p-5">
                 {/* Live Responsive Outfit Color & Accessories Visualizer */}
                 <div className="mb-4">
                   <OutfitCanvasPreview
@@ -943,6 +946,25 @@ export const ExploreScreen: React.FC<ExploreScreenProps> = ({
               </div>
             </div>
           </div>
+        </div>
+
+        {/* MOBILE STICKY PURCHASE BAR */}
+        <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-[#FAF8F5]/96 backdrop-blur-xl border-t border-[#EAE4DC] px-4 py-3 shadow-[0_-4px_25px_rgba(0,0,0,0.12)] flex items-center justify-between gap-3">
+          <div className="min-w-0">
+            <span className="text-[10px] uppercase font-bold text-[#C5A059] block tracking-wider truncate">
+              {selectedBaseProduct.name}
+            </span>
+            <span className="font-['Plus_Jakarta_Sans'] text-base font-bold text-[#1A1615] tabular-nums">
+              ₹{totalOutfitPriceINR.toLocaleString('en-IN')}
+            </span>
+          </div>
+          <button
+            onClick={handleAddCustomizedOutfit}
+            className="px-5 py-2.5 bg-[#1A1615] text-[#FAF8F5] hover:bg-[#C5A059] hover:text-[#1A1615] rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-md transition-all shrink-0 cursor-pointer min-h-[44px]"
+          >
+            <ShoppingBag className="w-3.5 h-3.5" />
+            <span>Add to Bag</span>
+          </button>
         </div>
       </>
     )}

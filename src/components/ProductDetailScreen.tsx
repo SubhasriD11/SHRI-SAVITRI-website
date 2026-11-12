@@ -107,7 +107,7 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
   };
 
   return (
-    <div className="w-full px-3 md:px-8 max-w-7xl mx-auto py-4 md:py-8">
+    <div className="w-full px-3 md:px-8 max-w-7xl mx-auto py-4 md:py-8 pb-24 lg:pb-8">
       {/* Top Back Affordance - Required by Prototype Spec */}
       <div className="mb-6 flex items-center justify-between">
         <button
@@ -517,6 +517,25 @@ export const ProductDetailScreen: React.FC<ProductDetailScreenProps> = ({
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Mobile Sticky Purchase Bar */}
+      <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md p-3 border-t border-[#EAE4DC] flex items-center justify-between gap-3 shadow-xl">
+        <div className="min-w-0">
+          <div className="text-[10px] text-[#687259] uppercase font-semibold tracking-wider truncate">
+            {selectedSize} · {attachedItems.length > 0 ? `+${attachedItems.length} Acc.` : 'Corset Saree'}
+          </div>
+          <div className="font-['Plus_Jakarta_Sans'] text-base font-bold text-[#1A1615] tabular-nums">
+            ₹{finalPriceINR.toLocaleString('en-IN')}
+          </div>
+        </div>
+
+        <button
+          onClick={handleAdd}
+          className="px-6 py-3 bg-[#1A1615] hover:bg-[#C5A059] hover:text-[#1A1615] text-[#FAF8F5] text-xs font-semibold uppercase tracking-wider rounded transition-colors shadow flex items-center gap-2 shrink-0 cursor-pointer"
+        >
+          <span>Add to Bag</span>
+        </button>
       </div>
 
       {/* Fitting Concierge Modal */}
